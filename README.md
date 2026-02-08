@@ -1,4 +1,4 @@
-ทำข้อ 1 ครับ นายธนกฤต ปรีชาพานิชพัฒนา 66050170
+# MVC
 
 1. Model (จัดการข้อมูลและ Business Logic)
   Database.java  ทำหน้าที่เป็น แหล่งข้อมูลกลาง  โหลดข้อมูลจากไฟล์ JSON ได้แก่  canteens.json ,   stalls.json ,  complaints.json และแปลงข้อมูล JSON เป็น Object ของ Model (Canteen, Stall, Complaint) โดยตัวของ  Controller จะดึงข้อมูลจาก Database เท่านั้น View ไม่สามารถเข้าถึง Database โดยตรง
@@ -33,11 +33,13 @@ ComplaintController.java เป็นตัวกลางระหว่าง 
 5. ดูสรุปร้านอาหาร -> StallSummaryView
 6. กดกลับ -> ComplaintListView
 
-การ build และ run
+## การ build และ run
 ```bash
+# Clone
 git clone https://github.com/sSODAs/MVC68_2.git
 cd MVC68_2
 
-javac -d bin src/**/*.java
+# Build & Run
+javac -encoding UTF-8 -d bin src\Main.java src\controller\*.java src\model\*.java src\view\*.java
 java -cp bin Main
 ```
